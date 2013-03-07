@@ -38,6 +38,22 @@
     NSArray *data = @[@"I'll Have Another", @"Animal Kingdom", @"Super Saver", @"Mine That Bird",
                       @"Big Brown", @"Street Sense", @"Barbaro", @"Giacomo", @"Smarty Jones", @"Funny Cide",
                       @"War Emblem", @"Monarchos", @"Fusaichi Pegasus"];
+    NSArray *imageURLS = @[
+                           @"http://kyderbyfan.freeservers.com/horses/barbaro.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/giacomo.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/smartyjones.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/funnycide.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/waremblem.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/monarchos.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/fupeg_coolmore.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/barbaro.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/giacomo.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/smartyjones.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/funnycide.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/waremblem.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/monarchos.jpg",
+                           @"http://kyderbyfan.freeservers.com/horses/fupeg_coolmore.jpg"
+                           ];
     
     _horses = [NSMutableArray arrayWithCapacity:[data count]];
     
@@ -47,6 +63,7 @@
         Animal *currentAnimal = [[Animal alloc] init];
         currentAnimal.name = [data objectAtIndex:i];
         currentAnimal.age = [NSNumber numberWithInt:year - i];
+        currentAnimal.imageURL = [NSURL URLWithString:[imageURLS objectAtIndex:i]];
         [self.horses addObject:currentAnimal];
     }
 }
@@ -80,6 +97,8 @@
     Animal *currentAnimal = [self.horses objectAtIndex:indexPath.row];
     cell.textLabel.text = currentAnimal.name;
     cell.detailTextLabel.text = [currentAnimal.age description];
+    [self setImageForCell:cell fromUrl:currentAnimal.imageURL];
+    
     return cell;
 }
 
@@ -143,6 +162,43 @@
     Animal *selectedAnimal = [self.horses objectAtIndex:path.row];
     DetailViewController *dvc = segue.destinationViewController;
     dvc.currentAnimal = selectedAnimal;
+}
+
+
+/*******************************************************************************
+ * @method          setImageForCell:fromUrl
+ * @abstract        Async donwload of image data from a passed URL; the image is assigned to the cell that is passed
+ * @description     WARNING: This is not a safe implementation of async downloading, check out AFNetworking on github for good example
+ ******************************************************************************/
+- (void) setImageForCell:(UITableViewCell*)theCell fromUrl:(NSURL*)theUrl
+{
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        // Define an image
+        UIImage *downloadImage = nil;
+        
+        // Download data from the URL address
+        NSData *responseData = [NSData dataWithContentsOfURL:theUrl];
+        
+        // Convert data to UIImage
+        downloadImage = [UIImage imageWithData:responseData];
+        
+        // Check if image exists (download was ok)
+        if (downloadImage) {
+            
+            // UI can't be updated from background thread, get back on main thread
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                // Assign the image to the cell properties
+                theCell.imageView.image = downloadImage;
+                    
+                // Redraw the cell
+                [theCell setNeedsLayout];
+            });
+        } else {
+            NSLog(@"-- impossible download: %@", theUrl);
+        }
+	});
 }
 
 @end
