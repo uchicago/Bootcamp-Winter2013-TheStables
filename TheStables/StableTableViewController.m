@@ -33,7 +33,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
-    _horses = @[@"Secretariat", @"Man O' War", @"Big Brown", @"Funny Cide", @"Mr. Ed"];
+    _horses = @[@"I'll Have Another", @"Animal Kingdom", @"Super Saver", @"Mine That Bird",
+                @"Big Brown", @"Street Sense", @"Barbaro", @"Giacomo", @"Smarty Jones", @"Funny Cide",
+                @"War Emblem", @"Monarchos", @"Fusaichi Pegasus"];
 
 }
 
