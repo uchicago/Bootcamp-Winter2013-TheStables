@@ -10,6 +10,6 @@
 
 @interface StableTableViewController : UITableViewController
 
-@property (strong, nonatomic) NSArray *horses;
+@property (strong, nonatomic) NSMutableArray *horses;
 
 @end

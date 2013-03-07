@@ -7,6 +7,8 @@
 //
 
 #import "StableTableViewController.h"
+#import "DetailViewController.h"
+#import "Animal.h"
 
 @interface StableTableViewController ()
 
@@ -33,10 +35,20 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
-    _horses = @[@"I'll Have Another", @"Animal Kingdom", @"Super Saver", @"Mine That Bird",
-                @"Big Brown", @"Street Sense", @"Barbaro", @"Giacomo", @"Smarty Jones", @"Funny Cide",
-                @"War Emblem", @"Monarchos", @"Fusaichi Pegasus"];
-
+    NSArray *data = @[@"I'll Have Another", @"Animal Kingdom", @"Super Saver", @"Mine That Bird",
+                      @"Big Brown", @"Street Sense", @"Barbaro", @"Giacomo", @"Smarty Jones", @"Funny Cide",
+                      @"War Emblem", @"Monarchos", @"Fusaichi Pegasus"];
+    
+    _horses = [NSMutableArray arrayWithCapacity:[data count]];
+    
+    // Create an Animal object for each horse and add the year
+    int year = 2012;
+    for (int i=0; i < [data count]; i++) {
+        Animal *currentAnimal = [[Animal alloc] init];
+        currentAnimal.name = [data objectAtIndex:i];
+        currentAnimal.age = [NSNumber numberWithInt:year - i];
+        [self.horses addObject:currentAnimal];
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,8 +77,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [self.horses objectAtIndex:indexPath.row];
-    
+    Animal *currentAnimal = [self.horses objectAtIndex:indexPath.row];
+    cell.textLabel.text = currentAnimal.name;
     return cell;
 }
 
@@ -121,6 +133,15 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
     NSLog(@"Clicked on cell %d", indexPath.row);
+}
+
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    Animal *selectedAnimal = [self.horses objectAtIndex:path.row];
+    DetailViewController *dvc = segue.destinationViewController;
+    dvc.currentAnimal = selectedAnimal;
 }
 
 @end

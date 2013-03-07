@@ -19,6 +19,8 @@
 		3726D47016E84FA300A7CF37 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3726D46E16E84FA300A7CF37 /* MainStoryboard.storyboard */; };
 		3726D47316E84FA300A7CF37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47216E84FA300A7CF37 /* ViewController.m */; };
 		3726D47B16E84FE500A7CF37 /* StableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47A16E84FE500A7CF37 /* StableTableViewController.m */; };
+		3726D47E16E8575900A7CF37 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47D16E8575900A7CF37 /* Animal.m */; };
+		3726D48216E85D3F00A7CF37 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D48116E85D3F00A7CF37 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,10 @@
 		3726D47216E84FA300A7CF37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3726D47916E84FE500A7CF37 /* StableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StableTableViewController.h; sourceTree = "<group>"; };
 		3726D47A16E84FE500A7CF37 /* StableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StableTableViewController.m; sourceTree = "<group>"; };
+		3726D47C16E8575900A7CF37 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
+		3726D47D16E8575900A7CF37 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
+		3726D48016E85D3F00A7CF37 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		3726D48116E85D3F00A7CF37 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,9 @@
 				3726D47A16E84FE500A7CF37 /* StableTableViewController.m */,
 				3726D47116E84FA300A7CF37 /* ViewController.h */,
 				3726D47216E84FA300A7CF37 /* ViewController.m */,
+				3726D48016E85D3F00A7CF37 /* DetailViewController.h */,
+				3726D48116E85D3F00A7CF37 /* DetailViewController.m */,
+				3726D47F16E8576200A7CF37 /* Data Model */,
 				3726D45D16E84FA300A7CF37 /* Supporting Files */,
 			);
 			path = TheStables;
@@ -110,6 +119,15 @@
 				3726D46C16E84FA300A7CF37 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3726D47F16E8576200A7CF37 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				3726D47C16E8575900A7CF37 /* Animal.h */,
+				3726D47D16E8575900A7CF37 /* Animal.m */,
+			);
+			name = "Data Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +200,8 @@
 				3726D46716E84FA300A7CF37 /* AppDelegate.m in Sources */,
 				3726D47316E84FA300A7CF37 /* ViewController.m in Sources */,
 				3726D47B16E84FE500A7CF37 /* StableTableViewController.m in Sources */,
+				3726D47E16E8575900A7CF37 /* Animal.m in Sources */,
+				3726D48216E85D3F00A7CF37 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
