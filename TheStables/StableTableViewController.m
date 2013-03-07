@@ -79,6 +79,7 @@
     // Configure the cell...
     Animal *currentAnimal = [self.horses objectAtIndex:indexPath.row];
     cell.textLabel.text = currentAnimal.name;
+    cell.detailTextLabel.text = [currentAnimal.age description];
     return cell;
 }
 
