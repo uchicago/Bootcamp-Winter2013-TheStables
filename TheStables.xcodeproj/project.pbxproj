@@ -20,6 +20,7 @@
 		3726D47B16E84FE500A7CF37 /* StableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47A16E84FE500A7CF37 /* StableTableViewController.m */; };
 		3726D47E16E8575900A7CF37 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47D16E8575900A7CF37 /* Animal.m */; };
 		3726D48216E85D3F00A7CF37 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D48116E85D3F00A7CF37 /* DetailViewController.m */; };
+		3763000116EC6A3C0080AE71 /* Racing Horse (47).jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3763000016EC6A3C0080AE71 /* Racing Horse (47).jpg */; };
 		3763FFFE16EC69220080AE71 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3763FFFC16EC69220080AE71 /* bar.png */; };
 		3763FFFF16EC69220080AE71 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3763FFFD16EC69220080AE71 /* bar@2x.png */; };
 /* End PBXBuildFile section */
@@ -45,6 +46,7 @@
 		3726D47D16E8575900A7CF37 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		3726D48016E85D3F00A7CF37 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		3726D48116E85D3F00A7CF37 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3763000016EC6A3C0080AE71 /* Racing Horse (47).jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Racing Horse (47).jpg"; sourceTree = "<group>"; };
 		3763FFFC16EC69220080AE71 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
 		3763FFFD16EC69220080AE71 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -102,6 +104,7 @@
 				3726D48116E85D3F00A7CF37 /* DetailViewController.m */,
 				3763FFFC16EC69220080AE71 /* bar.png */,
 				3763FFFD16EC69220080AE71 /* bar@2x.png */,
+				3763000016EC6A3C0080AE71 /* Racing Horse (47).jpg */,
 				3726D47F16E8576200A7CF37 /* Data Model */,
 				3726D45D16E84FA300A7CF37 /* Supporting Files */,
 			);
@@ -189,6 +192,7 @@
 				3726D47016E84FA300A7CF37 /* MainStoryboard.storyboard in Resources */,
 				3763FFFE16EC69220080AE71 /* bar.png in Resources */,
 				3763FFFF16EC69220080AE71 /* bar@2x.png in Resources */,
+				3763000116EC6A3C0080AE71 /* Racing Horse (47).jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
