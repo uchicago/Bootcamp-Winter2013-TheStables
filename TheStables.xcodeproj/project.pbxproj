@@ -17,10 +17,11 @@
 		3726D46B16E84FA300A7CF37 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3726D46A16E84FA300A7CF37 /* Default@2x.png */; };
 		3726D46D16E84FA300A7CF37 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3726D46C16E84FA300A7CF37 /* Default-568h@2x.png */; };
 		3726D47016E84FA300A7CF37 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3726D46E16E84FA300A7CF37 /* MainStoryboard.storyboard */; };
-		3726D47316E84FA300A7CF37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47216E84FA300A7CF37 /* ViewController.m */; };
 		3726D47B16E84FE500A7CF37 /* StableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47A16E84FE500A7CF37 /* StableTableViewController.m */; };
 		3726D47E16E8575900A7CF37 /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D47D16E8575900A7CF37 /* Animal.m */; };
 		3726D48216E85D3F00A7CF37 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3726D48116E85D3F00A7CF37 /* DetailViewController.m */; };
+		3763FFFE16EC69220080AE71 /* bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3763FFFC16EC69220080AE71 /* bar.png */; };
+		3763FFFF16EC69220080AE71 /* bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3763FFFD16EC69220080AE71 /* bar@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,14 +39,14 @@
 		3726D46A16E84FA300A7CF37 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3726D46C16E84FA300A7CF37 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3726D46F16E84FA300A7CF37 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		3726D47116E84FA300A7CF37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		3726D47216E84FA300A7CF37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3726D47916E84FE500A7CF37 /* StableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StableTableViewController.h; sourceTree = "<group>"; };
 		3726D47A16E84FE500A7CF37 /* StableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StableTableViewController.m; sourceTree = "<group>"; };
 		3726D47C16E8575900A7CF37 /* Animal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		3726D47D16E8575900A7CF37 /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		3726D48016E85D3F00A7CF37 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		3726D48116E85D3F00A7CF37 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		3763FFFC16EC69220080AE71 /* bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bar.png; sourceTree = "<group>"; };
+		3763FFFD16EC69220080AE71 /* bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +98,10 @@
 				3726D46E16E84FA300A7CF37 /* MainStoryboard.storyboard */,
 				3726D47916E84FE500A7CF37 /* StableTableViewController.h */,
 				3726D47A16E84FE500A7CF37 /* StableTableViewController.m */,
-				3726D47116E84FA300A7CF37 /* ViewController.h */,
-				3726D47216E84FA300A7CF37 /* ViewController.m */,
 				3726D48016E85D3F00A7CF37 /* DetailViewController.h */,
 				3726D48116E85D3F00A7CF37 /* DetailViewController.m */,
+				3763FFFC16EC69220080AE71 /* bar.png */,
+				3763FFFD16EC69220080AE71 /* bar@2x.png */,
 				3726D47F16E8576200A7CF37 /* Data Model */,
 				3726D45D16E84FA300A7CF37 /* Supporting Files */,
 			);
@@ -186,6 +187,8 @@
 				3726D46B16E84FA300A7CF37 /* Default@2x.png in Resources */,
 				3726D46D16E84FA300A7CF37 /* Default-568h@2x.png in Resources */,
 				3726D47016E84FA300A7CF37 /* MainStoryboard.storyboard in Resources */,
+				3763FFFE16EC69220080AE71 /* bar.png in Resources */,
+				3763FFFF16EC69220080AE71 /* bar@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +201,6 @@
 			files = (
 				3726D46316E84FA300A7CF37 /* main.m in Sources */,
 				3726D46716E84FA300A7CF37 /* AppDelegate.m in Sources */,
-				3726D47316E84FA300A7CF37 /* ViewController.m in Sources */,
 				3726D47B16E84FE500A7CF37 /* StableTableViewController.m in Sources */,
 				3726D47E16E8575900A7CF37 /* Animal.m in Sources */,
 				3726D48216E85D3F00A7CF37 /* DetailViewController.m in Sources */,
@@ -324,6 +326,7 @@
 				3726D47816E84FA300A7CF37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

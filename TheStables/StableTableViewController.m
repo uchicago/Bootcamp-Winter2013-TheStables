@@ -16,15 +16,11 @@
 
 @implementation StableTableViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
+/*******************************************************************************
+ * @method          viewDidLoad
+ * @abstract        Called when a view loads
+ * @description      
+ ******************************************************************************/
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -35,26 +31,19 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 
-    NSArray *data = @[@"I'll Have Another", @"Animal Kingdom", @"Super Saver", @"Mine That Bird",
-                      @"Big Brown", @"Street Sense", @"Barbaro", @"Giacomo", @"Smarty Jones", @"Funny Cide",
-                      @"War Emblem", @"Monarchos", @"Fusaichi Pegasus"];
+    // Array of Kentucky Derby Winners
+    NSArray *data = @[@"I'll Have Another", @"Animal Kingdom", @"Super Saver", @"Mine That Bird",@"Big Brown"];
+
+    // Array of horse images
     NSArray *imageURLS = @[
-                           @"http://kyderbyfan.freeservers.com/horses/barbaro.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/giacomo.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/smartyjones.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/funnycide.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/waremblem.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/monarchos.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/fupeg_coolmore.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/barbaro.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/giacomo.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/smartyjones.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/funnycide.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/waremblem.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/monarchos.jpg",
-                           @"http://kyderbyfan.freeservers.com/horses/fupeg_coolmore.jpg"
+                           @"http://farm3.staticflickr.com/2790/4209348482_407aaaf166_s.jpg",
+                           @"http://farm3.staticflickr.com/2799/4170439825_fe9f9490e8_q.jpg",
+                           @"http://farm1.staticflickr.com/188/399161674_ad879e3320_q.jpg",
+                           @"http://farm2.staticflickr.com/1219/1106933147_cd20180b4e_q.jpg",
+                           @"http://farm1.staticflickr.com/68/211240707_3a246dbd9f_q.jpg"
                            ];
     
+    // Initialize array that will hold animal objects
     _horses = [NSMutableArray arrayWithCapacity:[data count]];
     
     // Create an Animal object for each horse and add the year
@@ -68,6 +57,11 @@
     }
 }
 
+/*******************************************************************************
+ * @method          didReceiveMemoryWarning
+ * @abstract        
+ * @description
+ ******************************************************************************/
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -76,18 +70,31 @@
 
 #pragma mark - Table view data source
 
+/*******************************************************************************
+ * @method          numberOfSectionsInTableView
+ * @abstract        Return the number of sections.
+ * @description
+ ******************************************************************************/
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
     return 1;
 }
 
+/*******************************************************************************
+ * @method          tableView:numberOfRowsInSection:
+ * @abstract        Return the number of rows in the section.
+ * @description     
+ ******************************************************************************/
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
     return [self.horses count];
 }
 
+/*******************************************************************************
+ * @method          tableView:cellForRowAtIndexPath:
+ * @abstract        Return a tableview cell
+ * @description     
+ ******************************************************************************/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"AnimalCell";
@@ -102,60 +109,25 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
+/*******************************************************************************
+ * @method          tableView:didSelectRowAtIndexPath:
+ * @abstract        Called when a cell is tapped
+ * @description     
+ ******************************************************************************/
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
     NSLog(@"Clicked on cell %d", indexPath.row);
 }
 
 #pragma mark - Segue
+/*******************************************************************************
+ * @method          prepareForSegue:sender
+ * @abstract        Called before a segue transition
+ * @description
+ ******************************************************************************/
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSIndexPath *path = [self.tableView indexPathForSelectedRow];
@@ -164,7 +136,7 @@
     dvc.currentAnimal = selectedAnimal;
 }
 
-
+#pragma mark - Image Downloading
 /*******************************************************************************
  * @method          setImageForCell:fromUrl
  * @abstract        Async donwload of image data from a passed URL; the image is assigned to the cell that is passed

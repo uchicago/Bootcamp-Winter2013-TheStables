@@ -82,16 +82,16 @@
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Horse's Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="th0-7c-s8A">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="4Qx-Rz-YwU"/>
+                                    <constraint firstAttribute="height" constant="70" id="ZpR-Oz-iRc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Zjo-AJ-tye" firstAttribute="top" secondItem="L0B-ui-urw" secondAttribute="top" constant="44" id="GRh-Q5-FgP"/>
+                            <constraint firstItem="Zjo-AJ-tye" firstAttribute="top" secondItem="L0B-ui-urw" secondAttribute="top" constant="44" id="3Sa-aJ-qQU"/>
                             <constraint firstItem="Zjo-AJ-tye" firstAttribute="centerX" secondItem="L0B-ui-urw" secondAttribute="centerX" type="default" id="PDM-Zl-PgI"/>
                             <constraint firstItem="th0-7c-s8A" firstAttribute="leading" secondItem="Zjo-AJ-tye" secondAttribute="leading" type="default" id="X9g-j8-XSd"/>
                             <constraint firstItem="Zjo-AJ-tye" firstAttribute="trailing" secondItem="th0-7c-s8A" secondAttribute="trailing" type="default" id="ZIY-o3-Ndy"/>

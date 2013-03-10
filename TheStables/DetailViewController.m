@@ -14,22 +14,39 @@
 
 @implementation DetailViewController
 
+/*******************************************************************************
+ * @method          viewDidLoad
+ * @abstract        Called when view is loaded
+ * @description      
+ ******************************************************************************/
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
+/*******************************************************************************
+ * @method          viewWillAppear
+ * @abstract        Called before view appears
+ * @description
+ ******************************************************************************/
 - (void)viewWillAppear:(BOOL)animated {
     self.animalName.text = self.currentAnimal.name;
     [self setImage:self.animalImage fromUrl:self.currentAnimal.imageURL];
 }
 
+/*******************************************************************************
+ * @method          didReceiveMemoryWarning
+ * @abstract        Called when memory warning
+ * @description      
+ ******************************************************************************/
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Image Downloading
 /*******************************************************************************
  * @method          setImage:fromUrl:
  * @abstract        Async donwload of image data from a passed URL; the image is assigned to the cell that is passed
